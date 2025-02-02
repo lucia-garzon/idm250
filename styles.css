@@ -12,6 +12,58 @@ Requires PHP: 7.4
 */
 
 
+
+@font-face {
+    font-family: "open sans";
+    src: url('fonts/opensans-variablefont.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: "open sans";
+    src: url('fonts/opensans-variablefont.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "lato";
+    src: url('fonts/lato-bold.woff') format('woff');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+
+
+html {
+    --primary-text: #202530;
+    --secondary-text: #ffffff;
+
+    --primary: #2D80AD;
+    --secondary: #FFA34E; 
+    --mid-blue: #17A2D4;
+    --light-blue: #D6EFF4;
+    --light-blue-2: #BBE6F6;
+
+
+
+    --link-before: #FF9345; 
+    --main-background: #ffffff;
+    /* --footer-background: #005454; */
+    --button-color: #E76100;
+    --secondary-main: #353842; /* Teal/Aqua */
+    /* --hover-icon: #FFD80B; */
+    --border-radius: 8px;
+
+    --font-header: lato, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    --font-primary: open sans, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
 .burger {
     display: none;
 }
@@ -28,6 +80,7 @@ Requires PHP: 7.4
     z-index: 99;
     transition: none;
 }
+
 .logo img {
     transition: transform .3s;
 }
@@ -81,6 +134,7 @@ header nav {
     padding: 0.5rem .3rem; 
     margin-right: 3vh;
     position: relative;
+    font-family: var(--font-primary);
 }
 
 .nav-link::before {
@@ -89,7 +143,7 @@ header nav {
     width: 100%;
     height: 4px;
     border-radius: 4px;
-    background-color: var(--button-color);
+    background-color: var(--primary);
     bottom: 0;
     left: 0;
     transform-origin: right;
@@ -176,3 +230,157 @@ header nav {
     list-style: none;
     text-decoration: none;
 } 
+
+
+/* footer */
+
+.footer-content {
+    padding: 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10vw;
+    width: auto;
+    margin-top: 6vh;
+    background-color: var(--light-blue);
+}
+.footer-text {
+    max-width: 50ch;
+    font-family: var(--font-primary);
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Footer Styles */
+.link {
+    text-decoration: none;
+    color: var(--primary-text);
+    transition: color 0.3s ease;
+}
+.link::before {
+    color: var(--primary-text);
+
+}
+.link:visited {
+    color: #787878;
+}
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+.socials ul {
+    list-style: none;
+    text-align: center;
+    padding-left: 0;
+
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.socials li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    text-decoration: none;
+}
+.socials-logo {
+    position: relative;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-size: cover;
+    margin-right: 10px;
+}
+.footer-social a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text ul {
+        text-align: left;
+    }
+
+    .footer-social img {
+        width: 20px;
+        height: 20px;
+    }
+}
+.footer-img {
+    width: 64px;
+    margin-right: 18px;
+    background-color: white;
+    border-radius: var(--border-radius);
+}
+.footer-header {
+    color: var(--primary-text);
+    font-family: var(--font-header);
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--primary-text);
+}
+
+
+/* button */
+
+.btn--solid {
+    padding: 20px 48px;
+    background-color: var(--primary);
+    color: #fbf8f2;
+    border-radius: 0;
+}
+
+/* mailing list */
+
+.email {
+    width: 50%;
+    height: 65px;
+    border: none;
+      border-bottom-width: medium;
+      border-bottom-style: none;
+      border-bottom-color: currentcolor;
+    border-bottom: 2px solid #202530;
+    background: transparent;
+    position: relative;
+    margin-right: 24px;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.email-form {
+    display: flex;
+  }
+.mailing-list {
+    margin: 0 auto;
+    max-width: 950px;
+  }
+
+.mailing-list {
+    text-align: center;
+  }
