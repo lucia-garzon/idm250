@@ -1,12 +1,14 @@
 <header>
         <!-- navigation -->
-        <a class="logo" href="index.html">
+        <!-- <a class="logo" href="index.html">
             <img alt="logo" src="images/sws-logo.svg" class="logo">
-        </a>
+        </a> -->
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/sws-logo.svg" alt="logo">
         <nav class="nav-wrapper">
+        
             <ul class="nav-menu">
                 <li>
-                    <a class="nav-link">About</a>
+                    <a class="nav-link" href="page.php">About</a>
                 </li>
                 <li>
                     <a class="nav-link">Books</a>
