@@ -1,8 +1,4 @@
 <header>
-        <!-- navigation -->
-        <!-- <a class="logo" href="index.html">
-            <img alt="logo" src="images/sws-logo.svg" class="logo">
-        </a> -->
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/sws-logo.svg" alt="logo">
         <nav class="nav-wrapper">
         
