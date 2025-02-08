@@ -9,10 +9,15 @@
     bloginfo('name');
     ?></title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="image/svg" href="images/Lilypad-logo.svg">
     <?php wp_head();?>
 </head>
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
 
     <?php get_template_part('components/main-header'); ?>
+
+    <!-- <?php
+        wp_nav_menu ([
+            'theme_location' => 'primary-menu',
+        ]);
+    ?> -->
