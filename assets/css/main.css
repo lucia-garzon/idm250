@@ -108,16 +108,16 @@ header nav {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1000;
-  }
-  
+}
+
   /* Logo */
-  .header__logo .custom-logo {
+.header__logo .custom-logo {
     max-height: 50px;
     width: auto;
-  }
-  
+}
+
   /* Navigation Menu - Hidden by Default */
-  .menu {
+.menu {
     list-style: none;
     display: none;
     flex-direction: column;
@@ -128,58 +128,58 @@ header nav {
     width: 100%;
     padding: 1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .menu li {
+}
+
+.menu li {
     margin: 0.5rem 0;
     text-align: center;
-  }
-  
-  .menu li a {
+}
+
+.menu li a {
     text-decoration: none;
     color: #333;
     font-size: 1rem;
     font-weight: 600;
     transition: color 0.3s ease-in-out;
-  }
-  
-  .menu li a:hover {
+}
+
+.menu li a:hover {
     color: #0073e6;
-  }
-  
+}
+
   /* Show menu when active */
-  .menu.active {
+.menu.active {
     display: flex;
-  }
-  
+}
+
   /* Mobile Menu Button */
-  .menu-toggle {
+.menu-toggle {
     display: block;
     cursor: pointer;
     background: none;
     border: none;
     font-size: 2rem;
-  }
-  
+}
+
   /* Larger Screens: Display Menu Horizontally */
-  @media (min-width: 768px) {
+@media (min-width: 768px) {
     .menu-toggle {
-      display: none;
+        display: none;
     }
-  
+
     .menu {
-      display: flex;
-      flex-direction: row;
-      position: static;
-      width: auto;
-      padding: 0;
-      box-shadow: none;
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        padding: 0;
+        box-shadow: none;
     }
-  
+
     .menu li {
-      margin: 0 1rem;
+        margin: 0 1rem;
     }
-  }
+}
 
 
 body {
