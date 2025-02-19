@@ -12,8 +12,8 @@
 }
 
 @font-face {
-    font-family: "lato";
-    src: url('../fonts/lato-bold.woff') format('woff');
+    font-family: "outfit";
+    src: url('../fonts/outfit-header.ttf') format('ttf');
     font-weight: 100 900;
     font-style: normal;
 }
@@ -29,8 +29,6 @@ html {
     --light-blue: #D6EFF4;
     --light-blue-2: #BBE6F6;
 
-
-
     --link-before: #FF9345; 
     --main-background: #ffffff;
     /* --footer-background: #005454; */
@@ -39,7 +37,7 @@ html {
     /* --hover-icon: #FFD80B; */
     --border-radius: 8px;
 
-    --font-header: lato, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    --font-header: outfit, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
     --font-primary: open sans, 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 
     --spacer1: 1rem;
@@ -55,13 +53,21 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-header);
 }
 
+
 p, ul, figcaption, ol {
     font-family: var(--font-primary);
 }
 
-p {
+/* p {
     margin-bottom: var(--spacer5);
+} */
+
+body {
+    text-align: center;
+    margin: 0;
+    padding: 0;
 }
+
 
 .wp-block-heading {
     margin-bottom: var(--spacer1);
@@ -382,9 +388,9 @@ footer {
     width: 50%;
     height: 65px;
     border: none;
-      border-bottom-width: medium;
-      border-bottom-style: none;
-      border-bottom-color: currentcolor;
+    border-bottom-width: medium;
+    border-bottom-style: none;
+    border-bottom-color: currentcolor;
     border-bottom: 2px solid #202530;
     background: transparent;
     position: relative;
@@ -396,12 +402,45 @@ footer {
 
 .email-form {
     display: flex;
-  }
+}
 .mailing-list {
     margin: 0 auto;
     max-width: 950px;
-  }
-
-.mailing-list {
     text-align: center;
-  }
+}
+
+/* 404 page styles */
+
+.error-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.outfit-display {
+    font-family: var(--font-header);
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+.outfit-204 {
+    font-family: var(--font-header);
+    font-size: 204px;
+    font-weight: bold;
+    margin: -3vh;
+}
+
+.back-home {
+    display: inline-block;
+    margin-top: 20px;
+    text-decoration: underline;
+    color: var(--primary);
+    font-size: 16px;
+}
+
+.back-home:hover {
+    color: var(--primary-text);
+}
