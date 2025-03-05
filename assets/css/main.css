@@ -51,6 +51,7 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-header);
+    
 }
 
 
@@ -77,12 +78,14 @@ p, ul, figcaption, ol {
 .main-content {
     padding: var(--spacer5);
     margin: auto 0;
+    background-color: var(--main-background);
 }
 
 
 li.logo {
     margin-right: auto; 
 }
+
 
 .logo {
     border-radius: var(--border-radius);
@@ -144,7 +147,7 @@ header nav {
 }
 
 .menu li a:hover {
-    color: #0073e6;
+    color: var(--primary);
 }
 
   /* Show menu when active */
@@ -387,4 +390,42 @@ footer {
 
 .back-home:hover {
     color: var(--primary-text);
+}
+
+
+.wrapper {
+    max-width: 900px;  /* Keeps content readable */
+    margin: 50px auto; /* Centers content */
+    padding: 40px;
+    width: 90%; /* Makes sure it scales down on smaller screens */
+}
+a {
+    color: var(--primary);
+}
+td {
+    font-family: var(--font-primary);
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .wrapper {
+        
+        padding: 20px;  /* Reduce padding for smaller screens */
+        margin: 20px auto; /* Reduce margin */
+        width: 95%; /* Ensure better use of space */
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 15px;  /* More compact padding */
+        border-radius: 8px; /* Slightly less rounding */
+    }
+}
+
+.single-row {
+    display: flex;
+    justify-content: flex-end;
+}
+.single-row aside {
+    width: 30%;
 }
