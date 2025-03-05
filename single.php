@@ -10,7 +10,7 @@
         <ul>
         <?php dynamic_sidebar('main-sidebar');?>
     </ul>
-    </aside>image
+    </aside>
 </section>
         <article class="post">
             <h1 class="post-title"><?php echo get_the_title(); ?></h1>
