@@ -6,6 +6,13 @@
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
     <div class="wrapper">
+    <section class="single-row">
+        <aside>
+            <ul>
+            <?php dynamic_sidebar('main-sidebar');?>
+        </ul>
+        </aside>
+        </section>
 
         <article class="post">
             <h1 class="post-title"><?php echo get_the_title(); ?></h1>
