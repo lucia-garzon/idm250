@@ -1,12 +1,10 @@
 <?php get_header();?>
 
 <main>
-    <h1>
-        <?php echo get_the_title();?>
-    </h1>
-
-    <div class="main-content">
-        <?php echo get_the_content();?>
-    </div>
+<div class="wrapper">
+    
+    <?php get_template_part('components/latest-projects'); ?>
+    <?php get_template_part('components/latest-posts'); ?>
+</div>
 </main>
 <?php get_footer();?>
