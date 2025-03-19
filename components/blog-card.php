@@ -25,9 +25,6 @@
 
     <div class="blog-card__content">
         
-    
-
-
         <h3 class="blog-card__title"><?php the_title(); ?></h3>
         
     </div>

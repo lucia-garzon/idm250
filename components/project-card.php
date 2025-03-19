@@ -18,21 +18,10 @@
     <?php if (has_post_thumbnail()) : ?>
     <div class="project-card__image-wrapper">
         <?php the_post_thumbnail('large', ['class' => 'project-card__image']); ?>
-        <div class="project-card__overlay"></div>
-        <div class="project-card__meta">
-        <time datetime="<?php echo get_the_date('c'); ?>" class="project-card__date">
-            <?php echo get_the_date(); ?>
-        </time>
-        <?php
-                    $tags = get_the_terms(get_the_ID(), 'project-categories');
-        if (!empty($tags) && !is_wp_error($tags)) :
-            $tag_names = wp_list_pluck($tags, 'name');
-            echo '<span class="project-card__tags">' . implode(', ', $tag_names) . '</span>';
-        endif;
-        ?>
-        </div>
-        <h3 class="project-card__title"><?php the_title(); ?></h3>
     </div>
     <?php endif; ?>
+        <div class="project-card__content">
+        <h3 class="project-card__title"><?php the_title(); ?></h3>
+        </div>
     </a>
 </article>
