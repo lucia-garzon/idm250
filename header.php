@@ -8,7 +8,9 @@
     wp_title('|', true, 'right');
     bloginfo('name');
     ?></title>
+
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/assets/images/sws-logo.svg" type="image/svg+xml">
     <?php wp_head();?>
 </head>
 <body <?php body_class(); ?>>
