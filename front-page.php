@@ -1,6 +1,12 @@
+<?php get_header();?>
 
-<?php get_header(); ?>
+<main>
+    <h1>
+        <?php echo get_the_title();?>
+    </h1>
 
-    This is <b>the front-page<b>.
-
-<?php get_footer(); ?>
+    <div class="main-content">
+        <?php echo get_the_content();?>
+    </div>
+</main>
+<?php get_footer();?>
