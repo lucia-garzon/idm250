@@ -4,14 +4,9 @@
 <main class="post-container">
     
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-<section class="single-row">
+
     <div class="wrapper">
-    <aside>
-        <ul>
-        <?php dynamic_sidebar('main-sidebar');?>
-    </ul>
-    </aside>
-</section>
+
         <article class="post">
             <h1 class="post-title"><?php echo get_the_title(); ?></h1>
             <p class="post-meta">Published on <?php the_date(); ?> in <?php the_category(', '); ?></p>
