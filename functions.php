@@ -134,3 +134,57 @@ function register_custom_post_types()
 }
 
 add_action('init', 'register_custom_post_types');
+
+// Header customization!!!
+function mytheme_customize_register($wp_customize) {
+    // Add a section for the hero header
+    $wp_customize->add_section('hero_section', [
+        'title'    => __('Hero Section', 'mytheme'),
+        'priority' => 30,
+    ]);
+
+    // Add setting for the hero title
+    $wp_customize->add_setting('hero_title', [
+        'default'   => 'SWS',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+
+    // Add control for the hero title
+    $wp_customize->add_control('hero_title_control', [
+        'label'   => __('Hero Title', 'mytheme'),
+        'section' => 'hero_section',
+        'settings' => 'hero_title',
+        'type'    => 'text',
+    ]);
+
+    // Add setting for the hero subtitle
+    $wp_customize->add_setting('hero_subtitle', [
+        'default'   => 'SWS writes and draws award-winning comics.',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    ]);
+
+    // Add control for the hero subtitle
+    $wp_customize->add_control('hero_subtitle_control', [
+        'label'   => __('Hero Subtitle', 'mytheme'),
+        'section' => 'hero_section',
+        'settings' => 'hero_subtitle',
+        'type'    => 'text',
+    ]);
+
+    // Add Hero Image Setting
+    $wp_customize->add_setting('hero_image', [
+        'default'   => get_template_directory_uri() . '/assets/images/hero-img.jpg', // Default image
+        'transport' => 'refresh',
+        'sanitize_callback' => 'esc_url_raw',
+    ]);
+
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'hero_image_control', [
+        'label'    => __('Hero Image', 'mytheme'),
+        'section'  => 'hero_section',
+        'settings' => 'hero_image',
+    ]));
+}
+add_action('customize_register', 'mytheme_customize_register');
+
