@@ -595,3 +595,11 @@ td {
 .project-card__link {
     text-decoration: none;
 }
+
+
+.featured-image img{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    z-index: 2;
+}
