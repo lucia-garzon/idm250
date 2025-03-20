@@ -127,7 +127,7 @@ function register_custom_post_types()
         'menu_position' => 5,                // Position in WP admin menu
         'menu_icon' => 'dashicons-portfolio', // Optional: Custom icon for the post type
         'show_in_rest' => true,             // Enables Gutenberg support
-        //'taxonomies'  => ['project-categories'], // Uncomment if you have a custom taxonomy
+        'taxonomies'  => ['project-categories'], // Uncomment if you have a custom taxonomy
     ];
 
     register_post_type($post_type_name, $args);
@@ -188,3 +188,9 @@ function mytheme_customize_register($wp_customize) {
 }
 add_action('customize_register', 'mytheme_customize_register');
 
+/**
+ * 5. Register Custom Taxonomies
+ * ------------------------------
+ * Defines custom taxonomies (categories/tags for CPTs).
+ */
+require get_template_directory() . '/includes/taxonomies.php';
