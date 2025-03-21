@@ -497,7 +497,7 @@ td {
 }
 
 .blog-card__content, .project-card__content {
-    padding: 1.5rem;
+    padding: 1.2rem;
 }
 
 .blog-card__meta {
@@ -525,7 +525,6 @@ td {
 }
 
 .blog-card__title {
-    font-size: 1.25rem;
     font-weight: 600;
     margin-top: 1rem;
     color: var(--primary-text);
@@ -587,7 +586,6 @@ td {
 }
 
 .project-card__title {
-    font-size: 1.25rem;
     font-weight: 600;
     margin-top: 1rem;
     color: var(--primary-text);
