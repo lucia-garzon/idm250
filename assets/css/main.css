@@ -80,6 +80,9 @@ h5 {
 p, ul, figcaption, ol {
     font-family: var(--font-primary);
 }
+p, li {
+    line-height: 24px;
+}
 
 /* p {
     margin-bottom: var(--spacer5);
