@@ -8,11 +8,13 @@
 
 <?php get_header(); ?>
 
-<!-- <h1>
+<div class="wrapper">
+
+<h1>
     <?php 
         echo get_the_title();
     ?>
-</h1> -->
+</h1>
 
 <?php if (has_post_thumbnail()) : ?>
     <div class="featured-image">
@@ -24,5 +26,7 @@
     <?php 
         echo get_the_content();
     ?>
+</div>
+
 </div>
 <?php get_footer(); ?>
