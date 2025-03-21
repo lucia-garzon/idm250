@@ -22,12 +22,7 @@
                 </div>
             <?php endif; ?>
 
-            <!-- added featured image -->
-            <?php if (has_post_thumbnail()) : ?>
-                <div class="featured-image">
-                    <?php the_post_thumbnail(); ?>
-                </div>
-            <?php endif; ?>
+            
             
             <div>
             <p><strong>Book Audience:</strong>
@@ -45,7 +40,6 @@
                 <?php the_content(); ?>
             </div>
 
-            <?php get_template_part('components/author-box'); ?>
         
     </div>
             <!-- <div class="post-tags">

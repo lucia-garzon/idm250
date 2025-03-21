@@ -11,7 +11,7 @@
         <div>
             <form class="email-form" action="google.com" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate="">
                 <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Address" required="">
-                <input type="submit" id="mc-embedded-subscribe" class="btn btn--solid btn--black" value="sign me up">
+                <input type="submit" id="mc-embedded-subscribe" class="btn btn--solid btn--black" value="Sign me up">
             </form>
         </div>
 

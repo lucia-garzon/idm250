@@ -6,7 +6,7 @@ $query = new WP_Query([
 ?>
 <?php if ($query->have_posts()) : ?>
 <section class="">
-    <h2>Most Recent Work</h2>
+    <h2>Most Recent Books</h2>
     <div class="grid grid-3">
 
 
