@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="wrapper">
-    <h1 class="page-header">
+    <h1>
     <?php echo get_the_title(); ?> 
     </h1>
 
