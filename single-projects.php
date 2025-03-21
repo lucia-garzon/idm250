@@ -8,7 +8,13 @@
         
         <article class="post">
             <h1 class="post-title"><?php echo get_the_title(); ?></h1>
-            <p class="post-meta">Published on <?php the_date(); ?> in <?php the_category(', '); ?></p>
+            <p class="post-meta">Published on <?php the_date(); ?> in <?php echo get_the_term_list(
+                    get_the_ID(), // 204
+                    'project-categories', // taxonomy name
+                    '', // before
+                    ', ', // separator
+                    '' // after
+                ); ?></p>
             
             <?php if (has_post_thumbnail()) : ?>
                 <div class="post-thumbnail">
@@ -23,6 +29,18 @@
                 </div>
             <?php endif; ?>
             
+            <div>
+            <p><strong>Book Audience:</strong>
+                <?php echo get_the_term_list(
+                    get_the_ID(), // 204
+                    'project-categories', // taxonomy name
+                    '', // before
+                    ', ', // separator
+                    '' // after
+                ); ?>
+            </p>
+            </div>
+
             <div class="post-content">
                 <?php the_content(); ?>
             </div>
